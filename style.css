@@ -1,0 +1,147 @@
+body{
+	margin: 0;
+	background: #303f9f;
+	font-family: arial;
+}
+.container{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 1vh;
+	font-family: 'Poppins',sans-serif;
+}
+.container ul{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	
+}
+ul li{
+	list-style: none;
+	margin: 0;
+	font-size: 1.4em;
+	float: left;
+	padding: 5vw;
+
+}
+ul li a {
+	position: relative;
+	color: #ddd;
+	text-decoration: none;
+	font-weight: 700;
+}
+ul li a:before{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #f44336;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: 0.5s ease-in-out;
+
+}
+ul:hover li a:before{
+	width: 0;
+}
+ul li:hover a:before{
+	width: 100%;
+}
+.cont2{
+	margin: 4%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.cont2 .col{
+	background: #303f9f;
+	position: relative;
+	width: 23%;
+	height: 24em;
+	border: 1px solid black;
+	text-align: center;
+	letter-spacing: .02em;
+	text-overflow: hidden;
+}
+.cont2 .col h2{
+	position: absolute;
+	top: -0.8em;
+	right: 4px;
+	font-size: 12em;
+	transition: 0.3s;
+	color: #ddd;
+	opacity: 0.2;
+}
+.cont2 .col:hover h2{
+	top: -1em;
+
+}
+.cont2 .col p{
+	position: absolute;
+	top: 10em;
+	font-size: 1em;
+	color: white;
+}
+.cont2 .col a{
+	position: relative;
+	bottom: -19em;
+	left: -1em;
+	font-size: 1em;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 10%;
+	display: inline-block;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.cont2 .col:hover a{
+	
+	transform: translateY(-20px);
+	opacity: 1;
+	visibility: visible;
+
+}
+.cont2 .col a:hover{
+background: white;
+	color: #303f9f;
+
+}
+.cont2 .col:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: green;
+	z-index: -1;
+	transform: skew(4deg,4deg);
+}.cont2 .col:nth-child(1):before{
+	background: linear-gradient(315deg,#ff1744,#ff80ab)
+}.cont2 .col:nth-child(2):before{
+	background: linear-gradient(315deg,#9575cd,#7986cb )
+}.cont2 .col:nth-child(3):before{
+	background: linear-gradient(315deg,#81d4fa,#80deea)
+}.cont2 .col:nth-child(4):before{
+	background: linear-gradient(315deg,#00e676,#76ff03)
+}
+.cont2 .col:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50%;
+	background: #ddd;
+	opacity: 0.05;
+	pointer-events: none;
+
+}footer{
+	color: #fce4ec;
+}
